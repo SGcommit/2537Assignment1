@@ -247,11 +247,8 @@ app.get('/loggedin', (req, res) => {
 
 app.get('/logout', (req, res) => {
     req.session.destroy();
-    var html = `
-    <h1>You are logged out.</h1>
-    <a href="/">Homepage</a>
-    `;
-    res.send(html);
+    res.redirect('/');
+    return;
 });
 
 
