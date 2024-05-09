@@ -129,7 +129,7 @@ app.post('/submitEmail', (req, res) => {
 
 app.get('/createUser', (req, res) => {
     var html = `
-    create user
+    <h1>create user</h1>
     <form action='/submitUser' method='post'>
     <input name='username' type='text' placeholder='username'></br>
     <input name='email' type='text' placeholder='email'></br>
@@ -281,7 +281,7 @@ app.use(express.static(__dirname + "/public"));
 
 app.get("*", (req, res) => {
     res.status(404);
-    res.send("Page not found - 404");
+    res.send("<h3>Page not found - 404</h3>");
 })
 
 app.listen(port, () => {
